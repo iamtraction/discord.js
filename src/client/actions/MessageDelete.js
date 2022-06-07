@@ -8,7 +8,7 @@ class MessageDeleteAction extends Action {
     const client = this.client;
     const channel = this.getChannel(data);
     let message;
-    if (channel) {
+    if (channel && channel.type !== "voice") {
       message = this.getMessage(data, channel);
       if (message) {
         channel.messages.cache.delete(message.id);
