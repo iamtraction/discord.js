@@ -1309,7 +1309,7 @@ declare module 'discord.js' {
     private _evals: Map<string, Promise<any>>;
     private _exitListener: (...args: any[]) => void;
     private _fetches: Map<string, Promise<any>>;
-    private _handleExit(respawn?: boolean): void;
+    private _handleExit(respawn?: boolean, timeout?: number): void;
     private _handleMessage(message: any): void;
 
     public args: string[];
